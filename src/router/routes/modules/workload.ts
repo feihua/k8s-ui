@@ -1,7 +1,7 @@
 import type { AppRouteModule } from '/@/router/types';
 
 import { LAYOUT } from '/@/router/constant';
-import {t} from "/@/hooks/web/useI18n";
+import { t } from '/@/hooks/web/useI18n';
 // import { t } from '/@/hooks/web/useI18n';
 
 // @ts-ignore
@@ -42,6 +42,15 @@ const system: AppRouteModule = {
         ignoreKeepAlive: true,
       },
       component: () => import('/@/views/workload/statefulset/index.vue'),
+    },
+    {
+      path: 'cronJob',
+      name: 'CronJobManagement',
+      meta: {
+        title: '定时任务',
+        ignoreKeepAlive: true,
+      },
+      component: () => import('/@/views/workload/deployment/index.vue'),
     },
     {
       path: 'pod',
